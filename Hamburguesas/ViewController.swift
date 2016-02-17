@@ -10,9 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let coleccionDePaises = ColeccionDePaises()
+    let coleccionDeHamburgesas = ColeccionDeHamburgesa()
+    
+    @IBOutlet weak var labelPais: UILabel! = nil
+    @IBOutlet weak var labelHamburgesa: UILabel! = nil
+    
     override func viewDidLoad() {
+        
+        
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +27,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func actionQuieroUnaHamburgesa() {
+        
+        labelPais.text = coleccionDePaises.obtenPais()
+        
+        labelHamburgesa.text = coleccionDeHamburgesas.obtenHamburguesa()
+    }
 
 }
 
