@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let colores = Colores()
     let coleccionDePaises = ColeccionDePaises()
     let coleccionDeHamburgesas = ColeccionDeHamburgesa()
     
@@ -28,6 +29,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func actionQuieroUnaHamburgesa() {
+        
+        view.backgroundColor = colores.getRandamColor()
         
         labelPais.text = coleccionDePaises.obtenPais()
         
